@@ -13,6 +13,6 @@ Day-to-day life can be taxing and confusing without proper planning.  Use DailyG
 ### Example
 My goal today is to finish my project.
 
-Step 1: Make dinner and eat when I get home.
-Step 2: Spend 2 hours on research and editing.
-Step 3: Put the finishing touches on project.
+1. Make dinner and eat when I get home.
+2. Spend 2 hours on research and editing.
+3. Put the finishing touches on project.
