@@ -1,7 +1,7 @@
 # DailyGoal-iOS
 DailyGoal is an app to help you keep track of one daily goal, and supports you in attaining it through logging 3 steps in your process.
 
-Day-to-day life can be taxing and confusing without proper planning.  Use DailyGoal to break down what you want to do today, and achieve it more efficiently.
+Day-to-day life can be taxing and confusing without proper planning, even for the smallest of objectives.  Use DailyGoal to break down what you want to do today, and achieve it more efficiently.
 
 ### Features
 
