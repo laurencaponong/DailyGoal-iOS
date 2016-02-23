@@ -205,6 +205,7 @@
 				TargetAttributes = {
 					DBB8C94B1C7B5AF50097DCF8 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 37N576WJ83;
 					};
 					DBB8C95F1C7B5AF60097DCF8 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -413,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = dailyGoal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurencaponong.dailyGoal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = dailyGoal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurencaponong.dailyGoal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -498,6 +505,7 @@
 				DBB8C9761C7B5AF60097DCF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBB8C9771C7B5AF60097DCF8 /* Build configuration list for PBXNativeTarget "dailyGoalTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +514,7 @@
 				DBB8C9791C7B5AF60097DCF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBB8C97A1C7B5AF60097DCF8 /* Build configuration list for PBXNativeTarget "dailyGoalUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +523,7 @@
 				DBB8C97C1C7B5AF60097DCF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

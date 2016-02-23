@@ -10,6 +10,12 @@ import UIKit
 
 class AddNewGoalViewController: UIViewController {
     
+    
+    @IBOutlet weak var saveButtonTapped: UIButton!
+    
+    
+    
+    
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -20,6 +26,10 @@ class AddNewGoalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+            
+            saveButtonTapped.layer.borderWidth = 1
+            saveButtonTapped.layer.borderColor = UIColor.whiteColor().CGColor
+            
     }
 
     override func didReceiveMemoryWarning() {
