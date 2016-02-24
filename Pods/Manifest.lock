@@ -1,0 +1,17 @@
+PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - TKAnimatedCheckButton (0.3)
+
+DEPENDENCIES:
+  - ChameleonFramework/Swift
+  - TKAnimatedCheckButton
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  TKAnimatedCheckButton: 0bccc90aa642b0aa7e8bd3dc952ed2fb641cc752
+
+PODFILE CHECKSUM: 9f71614849ca40c91687d5ba86fa42a8ce4b1ac0
+
+COCOAPODS: 1.0.0.beta.2

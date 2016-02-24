@@ -1,0 +1,6 @@
+framework module Pods_dailyGoal {
+  umbrella header "Pods-dailyGoal-umbrella.h"
+
+  export *
+  module * { export * }
+}

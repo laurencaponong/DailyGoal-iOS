@@ -10,10 +10,16 @@ import UIKit
 
 class AddNewGoalViewController: UIViewController {
     
+    @IBOutlet weak var newGoalTextField: UITextField!
+    var delegate: changeGoalDelegate?
+    
     
     @IBOutlet weak var saveButtonTapped: UIButton!
     
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
     
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
@@ -22,8 +28,21 @@ class AddNewGoalViewController: UIViewController {
         
     }
     
-        override func viewDidLoad() {
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "yourIdentifierInStoryboard") {
+            
+            var yourNextViewController = (segue.destinationViewController as! HomeViewController)
+            yourNextViewController.delegate = self
+        }
+    }
+    
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
+            
+            delegate?.setGoal()
 
         // Do any additional setup after loading the view.
             

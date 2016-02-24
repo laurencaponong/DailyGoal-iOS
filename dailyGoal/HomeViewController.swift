@@ -7,40 +7,63 @@
 //
 
 import UIKit
+import ChameleonFramework
+import TKAnimatedCheckButton
 
-class HomeViewController: UIViewController {
+
+
+class HomeViewController: UIViewController, changeGoalDelegate {
+    
+    func setGoal() {
+        goalLabel.text = ""
+    }
+    
+    
+    @IBOutlet weak var stepOneView: UIView!
+    
+    var button: TKAnimatedCheckButton! = nil
+    var button2: TKAnimatedCheckButton! = nil
+    var button3: TKAnimatedCheckButton! = nil
+    
+    func makeButton () {
+        
+        button = TKAnimatedCheckButton(frame: CGRectMake(40, 250, 50, 50))
+        button.addTarget(self, action: "toggle1:", forControlEvents:.TouchUpInside)
+        button.skeletonColor = UIColor.flatYellowColor().CGColor
+        view.addSubview(button)
+        
+        button2 = TKAnimatedCheckButton(frame: CGRectMake(160, 250, 50, 50))
+        button2.addTarget(self, action: "toggle2:", forControlEvents:.TouchUpInside)
+        button2.skeletonColor = UIColor.flatOrangeColor().CGColor
+        view.addSubview(button2)
+        
+        button3 = TKAnimatedCheckButton(frame: CGRectMake(287, 250, 50, 50))
+        button3.addTarget(self, action: "toggle3:", forControlEvents:.TouchUpInside)
+        button3.skeletonColor = UIColor.flatRedColor().CGColor
+        view.addSubview(button3)
+        
+        
+    }
+    
+    func toggle1(sender: AnyObject!) {
+        button.checked = !button.checked
+    }
+    
+    
+    func toggle2(sender: AnyObject!) {
+        button2.checked = !button2.checked
+    }
+    
+    
+    func toggle3(sender: AnyObject!) {
+        button3.checked = !button3.checked
+    }
+    
+    
+
+    
 
     @IBOutlet weak var goalLabel: UILabel!
-//    
-//    @IBAction func plusButtonTapped(sender: AnyObject) {
-//        
-//        let alertController = UIAlertController(title: "New Goal", message: "Enter a new goal below:", preferredStyle: .Alert)
-//        
-//        let confirmAction = UIAlertAction(title: "Confirm", style: .Default) { (_) in
-//            if let field = alertController.textFields![0] as? UITextField {
-//                // store your data
-//                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "currentGoal")
-//                NSUserDefaults.standardUserDefaults().synchronize()
-//                self.goalLabel.text = field.text
-//                
-//            } else {
-//                print("User did not enter a goal")
-//            }
-//        }
-//        
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
-//        
-//        alertController.addTextFieldWithConfigurationHandler { (textField) in
-//            textField.placeholder = "Enter a new goal here"
-//        }
-//        
-//        alertController.addAction(confirmAction)
-//        alertController.addAction(cancelAction)
-//        
-//        self.presentViewController(alertController, animated: true, completion: nil)
-//        
-//    }
-    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -49,27 +72,46 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().barTintColor = UIColor.blackColor()
         
+        makeButton()
+        setGoal()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    }    
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //
+    //    @IBAction func plusButtonTapped(sender: AnyObject) {
+    //
+    //        let alertController = UIAlertController(title: "New Goal", message: "Enter a new goal below:", preferredStyle: .Alert)
+    //
+    //        let confirmAction = UIAlertAction(title: "Confirm", style: .Default) { (_) in
+    //            if let field = alertController.textFields![0] as? UITextField {
+    //                // store your data
+    //                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "currentGoal")
+    //                NSUserDefaults.standardUserDefaults().synchronize()
+    //                self.goalLabel.text = field.text
+    //
+    //            } else {
+    //                print("User did not enter a goal")
+    //            }
+    //        }
+    //
+    //        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+    //
+    //        alertController.addTextFieldWithConfigurationHandler { (textField) in
+    //            textField.placeholder = "Enter a new goal here"
+    //        }
+    //
+    //        alertController.addAction(confirmAction)
+    //        alertController.addAction(cancelAction)
+    //
+    //        self.presentViewController(alertController, animated: true, completion: nil)
+    //        
+    //    }
+    
+    
+    
 
 }
