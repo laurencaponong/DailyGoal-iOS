@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		899062331C7D467300761D22 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899062321C7D467300761D22 /* Protocol.swift */; };
 		CEB1C32E9C7F1AE0DF5DC184 /* Pods_dailyGoal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AADA6F663A031DA8017E068 /* Pods_dailyGoal.framework */; };
+		DB7DCFAF1C7E52FE00AC22FC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB7DCFAD1C7E52FE00AC22FC /* Model.xcdatamodeld */; };
+		DB7DCFB21C7E536C00AC22FC /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DCFB01C7E536C00AC22FC /* Goal+CoreDataProperties.swift */; };
+		DB7DCFB31C7E536C00AC22FC /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DCFB11C7E536C00AC22FC /* Goal.swift */; };
 		DBB8C9501C7B5AF60097DCF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C94F1C7B5AF60097DCF8 /* AppDelegate.swift */; };
 		DBB8C9551C7B5AF60097DCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB8C9531C7B5AF60097DCF8 /* Main.storyboard */; };
 		DBB8C9571C7B5AF60097DCF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB8C9561C7B5AF60097DCF8 /* Assets.xcassets */; };
@@ -17,9 +20,7 @@
 		DBB8C9701C7B5AF60097DCF8 /* dailyGoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C96F1C7B5AF60097DCF8 /* dailyGoalUITests.swift */; };
 		DBB8C97E1C7B5B230097DCF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C97D1C7B5B230097DCF8 /* HomeViewController.swift */; };
 		DBB8C9801C7B71200097DCF8 /* AddNewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C97F1C7B71200097DCF8 /* AddNewGoalViewController.swift */; };
-		DBB8C9821C7B72A70097DCF8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C9811C7B72A70097DCF8 /* Goal.swift */; };
 		DBB8C9841C7B7BC40097DCF8 /* PastGoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C9831C7B7BC40097DCF8 /* PastGoalsTableViewController.swift */; };
-		DBB8C9871C7B9AAE0097DCF8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBB8C9851C7B9AAE0097DCF8 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,9 @@
 		5AADA6F663A031DA8017E068 /* Pods_dailyGoal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dailyGoal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899062321C7D467300761D22 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		B14A7BFF4BB9763C366B0850 /* Pods-dailyGoal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyGoal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dailyGoal/Pods-dailyGoal.debug.xcconfig"; sourceTree = "<group>"; };
+		DB7DCFAE1C7E52FE00AC22FC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DB7DCFB01C7E536C00AC22FC /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DB7DCFB11C7E536C00AC22FC /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		DBB8C94C1C7B5AF60097DCF8 /* dailyGoal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dailyGoal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB8C94F1C7B5AF60097DCF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB8C9541C7B5AF60097DCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,9 +62,7 @@
 		DBB8C9711C7B5AF60097DCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBB8C97D1C7B5B230097DCF8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBB8C97F1C7B71200097DCF8 /* AddNewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewGoalViewController.swift; sourceTree = "<group>"; };
-		DBB8C9811C7B72A70097DCF8 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		DBB8C9831C7B7BC40097DCF8 /* PastGoalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastGoalsTableViewController.swift; sourceTree = "<group>"; };
-		DBB8C9861C7B9AAE0097DCF8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB7DCFAB1C7E50B600AC22FC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DCFB01C7E536C00AC22FC /* Goal+CoreDataProperties.swift */,
+				DB7DCFB11C7E536C00AC22FC /* Goal.swift */,
+				DB7DCFAD1C7E52FE00AC22FC /* Model.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		DB7DCFAC1C7E50D300AC22FC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8C97D1C7B5B230097DCF8 /* HomeViewController.swift */,
+				DBB8C97F1C7B71200097DCF8 /* AddNewGoalViewController.swift */,
+				DBB8C9831C7B7BC40097DCF8 /* PastGoalsTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		DBB8C9431C7B5AF50097DCF8 = {
 			isa = PBXGroup;
 			children = (
@@ -131,16 +153,13 @@
 		DBB8C94E1C7B5AF60097DCF8 /* dailyGoal */ = {
 			isa = PBXGroup;
 			children = (
+				DB7DCFAC1C7E50D300AC22FC /* View Controllers */,
+				DB7DCFAB1C7E50B600AC22FC /* CoreData */,
 				DBB8C94F1C7B5AF60097DCF8 /* AppDelegate.swift */,
-				DBB8C9851C7B9AAE0097DCF8 /* Model.xcdatamodeld */,
 				DBB8C9531C7B5AF60097DCF8 /* Main.storyboard */,
 				DBB8C9561C7B5AF60097DCF8 /* Assets.xcassets */,
 				DBB8C9581C7B5AF60097DCF8 /* LaunchScreen.storyboard */,
 				DBB8C95B1C7B5AF60097DCF8 /* Info.plist */,
-				DBB8C97D1C7B5B230097DCF8 /* HomeViewController.swift */,
-				DBB8C97F1C7B71200097DCF8 /* AddNewGoalViewController.swift */,
-				DBB8C9831C7B7BC40097DCF8 /* PastGoalsTableViewController.swift */,
-				DBB8C9811C7B72A70097DCF8 /* Goal.swift */,
 				899062321C7D467300761D22 /* Protocol.swift */,
 			);
 			path = dailyGoal;
@@ -347,13 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7DCFB31C7E536C00AC22FC /* Goal.swift in Sources */,
 				DBB8C9841C7B7BC40097DCF8 /* PastGoalsTableViewController.swift in Sources */,
-				DBB8C9821C7B72A70097DCF8 /* Goal.swift in Sources */,
 				DBB8C9801C7B71200097DCF8 /* AddNewGoalViewController.swift in Sources */,
 				899062331C7D467300761D22 /* Protocol.swift in Sources */,
 				DBB8C9501C7B5AF60097DCF8 /* AppDelegate.swift in Sources */,
 				DBB8C97E1C7B5B230097DCF8 /* HomeViewController.swift in Sources */,
-				DBB8C9871C7B9AAE0097DCF8 /* Model.xcdatamodeld in Sources */,
+				DB7DCFB21C7E536C00AC22FC /* Goal+CoreDataProperties.swift in Sources */,
+				DB7DCFAF1C7E52FE00AC22FC /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,12 +629,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DBB8C9851C7B9AAE0097DCF8 /* Model.xcdatamodeld */ = {
+		DB7DCFAD1C7E52FE00AC22FC /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DBB8C9861C7B9AAE0097DCF8 /* Model.xcdatamodel */,
+				DB7DCFAE1C7E52FE00AC22FC /* Model.xcdatamodel */,
 			);
-			currentVersion = DBB8C9861C7B9AAE0097DCF8 /* Model.xcdatamodel */;
+			currentVersion = DB7DCFAE1C7E52FE00AC22FC /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

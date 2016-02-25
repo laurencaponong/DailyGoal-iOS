@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import TKAnimatedCheckButton
+import CoreData
 
 
 
@@ -70,6 +71,10 @@ class HomeViewController: UIViewController, changeGoalDelegate {
     }
     
     
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,39 +84,29 @@ class HomeViewController: UIViewController, changeGoalDelegate {
         makeButton()
         setGoal()
         
-    }    
-    
-    //
-    //    @IBAction func plusButtonTapped(sender: AnyObject) {
-    //
-    //        let alertController = UIAlertController(title: "New Goal", message: "Enter a new goal below:", preferredStyle: .Alert)
-    //
-    //        let confirmAction = UIAlertAction(title: "Confirm", style: .Default) { (_) in
-    //            if let field = alertController.textFields![0] as? UITextField {
-    //                // store your data
-    //                NSUserDefaults.standardUserDefaults().setObject(field.text, forKey: "currentGoal")
-    //                NSUserDefaults.standardUserDefaults().synchronize()
-    //                self.goalLabel.text = field.text
-    //
-    //            } else {
-    //                print("User did not enter a goal")
-    //            }
-    //        }
-    //
-    //        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
-    //
-    //        alertController.addTextFieldWithConfigurationHandler { (textField) in
-    //            textField.placeholder = "Enter a new goal here"
-    //        }
-    //
-    //        alertController.addAction(confirmAction)
-    //        alertController.addAction(cancelAction)
-    //
-    //        self.presentViewController(alertController, animated: true, completion: nil)
-    //        
-    //    }
-    
-    
-    
+        print(managedObjectContext)
+        
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("Goal", inManagedObjectContext: self.managedObjectContext) as! Goal
+        
+        newItem.goalName = "New Goal"
+        newItem.step1 = "Step one goal"
+        
+        
+    }
 
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Create a new fetch request using the LogItem entity
+        let fetchRequest = NSFetchRequest(entityName: "Goal")
+        
+        // Execute the fetch request, and cast the results to an array of LogItem objects
+        if let fetchResults = try? managedObjectContext.executeFetchRequest(fetchRequest) as? [Goal] {
+            
+            fetchResults 
+        }
+    }
+    
+    
 }

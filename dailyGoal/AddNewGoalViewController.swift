@@ -29,14 +29,14 @@ class AddNewGoalViewController: UIViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if(segue.identifier == "yourIdentifierInStoryboard") {
-            
-            var yourNextViewController = (segue.destinationViewController as! HomeViewController)
-            yourNextViewController.delegate = self
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if(segue.identifier == "yourIdentifierInStoryboard") {
+//            
+//            var yourNextViewController = (segue.destinationViewController as! HomeViewController)
+//            yourNextViewController.delegate = self
+//        }
+//    }
     
     
     override func viewDidLoad() {
