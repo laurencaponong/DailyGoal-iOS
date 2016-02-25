@@ -10,61 +10,46 @@ import UIKit
 
 class AddNewGoalViewController: UIViewController {
     
-    @IBOutlet weak var newGoalTextField: UITextField!
-    var delegate: changeGoalDelegate?
+    var delegate: displayGoalAndStepsDelegate? = nil
     
+    @IBOutlet weak var newGoalTextField: UITextField!
+    @IBOutlet weak var stepOneTextField: UITextField!
+    @IBOutlet weak var stepTwoTextField: UITextField!
+    @IBOutlet weak var stepThreeTextField: UITextField!
     
     @IBOutlet weak var saveButtonTapped: UIButton!
-    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
-    
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        if (delegate != nil) {
+            
+            delegate!.displayGoalsAndSteps(newGoalTextField.text!, step1: stepOneTextField.text!, step2: stepTwoTextField.text!, step3: stepThreeTextField.text!)
+        }
+        
+                dismissViewControllerAnimated(true, completion: nil)
+        
         
     }
-    
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if(segue.identifier == "yourIdentifierInStoryboard") {
-//            
-//            var yourNextViewController = (segue.destinationViewController as! HomeViewController)
-//            yourNextViewController.delegate = self
-//        }
-//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-            delegate?.setGoal()
 
-        // Do any additional setup after loading the view.
-            
-            saveButtonTapped.layer.borderWidth = 1
-            saveButtonTapped.layer.borderColor = UIColor.whiteColor().CGColor
-            
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        saveButtonTapped.layer.borderWidth = 1
+        saveButtonTapped.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
-    */
+    
 
 }

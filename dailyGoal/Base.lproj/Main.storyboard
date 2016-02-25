@@ -29,15 +29,14 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AW-NQ-p3S" userLabel="Bottom View W/ Steps">
-                                        <rect key="frame" x="0.0" y="210" width="600" height="370"/>
+                                        <rect key="frame" x="0.0" y="230" width="600" height="350"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-cZ-D8k" userLabel="Step 1 View">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="370"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BD-Jj-o2A">
-                                                        <rect key="frame" x="20" y="80" width="160" height="125.5"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</string>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BD-Jj-o2A">
+                                                        <rect key="frame" x="20" y="80" width="160" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -62,15 +61,8 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di4-k2-BZp" userLabel="Step 2 View">
-                                                <rect key="frame" x="200" y="0.0" width="200" height="370"/>
+                                                <rect key="frame" x="200" y="0.0" width="200" height="350"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-rZ-hqY">
-                                                        <rect key="frame" x="20" y="80" width="160" height="125.5"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</string>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQb-gG-nZd">
                                                         <rect key="frame" x="75" y="10" width="50" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -79,6 +71,12 @@
                                                             <constraint firstAttribute="height" constant="50" id="xSp-yL-C7p"/>
                                                         </constraints>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the + to add your steps" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-rZ-hqY">
+                                                        <rect key="frame" x="20" y="80" width="160" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -90,15 +88,8 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-w9-DuR" userLabel="Step 3 View">
-                                                <rect key="frame" x="400" y="0.0" width="200" height="370"/>
+                                                <rect key="frame" x="400" y="0.0" width="200" height="350"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8q-79-l2r">
-                                                        <rect key="frame" x="20" y="80" width="160" height="125.5"/>
-                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</string>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUX-m3-0pP">
                                                         <rect key="frame" x="75" y="10" width="50" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -107,6 +98,12 @@
                                                             <constraint firstAttribute="height" constant="50" id="FqX-wb-3B7"/>
                                                         </constraints>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8q-79-l2r">
+                                                        <rect key="frame" x="20" y="80" width="160" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -137,17 +134,17 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your goal for today is" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-iS-Agq">
-                                        <rect key="frame" x="20" y="30" width="560" height="30"/>
+                                        <rect key="frame" x="20" y="50" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click + to add a new goal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onG-F9-cAq">
-                                        <rect key="frame" x="20" y="60" width="560" height="150"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click + to add a new goal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onG-F9-cAq">
+                                        <rect key="frame" x="20" y="80" width="560" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="FaN-k1-6a1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="55"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="55"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -172,7 +169,7 @@
                                     <constraint firstItem="i0r-iS-Agq" firstAttribute="leading" secondItem="g88-2G-kH8" secondAttribute="leading" constant="20" id="eF5-ZQ-8Ry"/>
                                     <constraint firstAttribute="bottom" secondItem="3AW-NQ-p3S" secondAttribute="bottom" id="ePv-Fx-0h3"/>
                                     <constraint firstAttribute="trailing" secondItem="3AW-NQ-p3S" secondAttribute="trailing" id="of5-hO-SjE"/>
-                                    <constraint firstItem="i0r-iS-Agq" firstAttribute="top" secondItem="g88-2G-kH8" secondAttribute="top" constant="30" id="sTL-GG-Tjw"/>
+                                    <constraint firstItem="i0r-iS-Agq" firstAttribute="top" secondItem="g88-2G-kH8" secondAttribute="top" constant="50" id="sTL-GG-Tjw"/>
                                     <constraint firstItem="onG-F9-cAq" firstAttribute="top" secondItem="i0r-iS-Agq" secondAttribute="bottom" constant="20" id="vUf-Je-0iM"/>
                                     <constraint firstAttribute="trailing" secondItem="onG-F9-cAq" secondAttribute="trailing" constant="20" id="w1b-Nd-WGd"/>
                                 </constraints>
@@ -202,7 +199,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mJM-xI-JS7" kind="presentation" id="OI0-ga-Gtf"/>
+                                    <segue destination="mJM-xI-JS7" kind="presentation" identifier="mySegue" id="OI0-ga-Gtf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -236,10 +233,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="ixb-56-hsl"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="favourite-circular-button" id="ixb-56-hsl"/>
                     <connections>
                         <outlet property="goalLabel" destination="onG-F9-cAq" id="8e2-jl-PeX"/>
+                        <outlet property="stepOneLabel" destination="1BD-Jj-o2A" id="a8w-9s-iJw"/>
                         <outlet property="stepOneView" destination="1OO-9Y-RPO" id="iF9-Im-4Q6"/>
+                        <outlet property="stepThreeLabel" destination="I8q-79-l2r" id="8qI-ru-VGB"/>
+                        <outlet property="stepTwoLabel" destination="gjP-rZ-hqY" id="SNS-Kh-M46"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -370,13 +370,16 @@
                     <connections>
                         <outlet property="newGoalTextField" destination="ahz-lh-hm7" id="VPb-Yj-kxh"/>
                         <outlet property="saveButtonTapped" destination="38j-qx-nI0" id="HGZ-V5-ohD"/>
+                        <outlet property="stepOneTextField" destination="vg4-il-BWW" id="yBU-vL-kTL"/>
+                        <outlet property="stepThreeTextField" destination="Sxu-O8-zeN" id="sTR-xI-ZFx"/>
+                        <outlet property="stepTwoTextField" destination="gR5-wJ-AlP" id="gtv-Ii-L9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzM-RW-jib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952" y="208"/>
         </scene>
-        <!--Past Goals-->
+        <!--Achieved Goals-->
         <scene sceneID="9Uo-sk-b32">
             <objects>
                 <tableViewController id="QX1-Gc-yhZ" customClass="PastGoalsTableViewController" customModule="dailyGoal" customModuleProvider="target" sceneMemberID="viewController">
@@ -415,7 +418,7 @@
                             <outlet property="delegate" destination="QX1-Gc-yhZ" id="jA7-Y0-8X3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Past Goals" id="71E-pO-GmM" userLabel="Past Goals"/>
+                    <tabBarItem key="tabBarItem" title="Achieved Goals" image="check-sign" id="71E-pO-GmM" userLabel="Past Goals"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvL-ne-KgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,6 +444,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check-sign" width="16" height="16"/>
+        <image name="favourite-circular-button" width="16" height="16"/>
         <image name="landscape" width="2500" height="1582"/>
         <image name="plus" width="50" height="50"/>
         <image name="water" width="7149" height="4771"/>

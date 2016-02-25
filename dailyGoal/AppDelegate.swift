@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().layer.backgroundColor = UIColor.clearColor().CGColor
         UITabBar.appearance().shadowImage = nil
    
+        NSThread.sleepForTimeInterval(1.5)
         
         return true
     }

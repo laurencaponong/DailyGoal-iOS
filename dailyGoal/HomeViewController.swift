@@ -10,22 +10,26 @@ import UIKit
 import ChameleonFramework
 import TKAnimatedCheckButton
 import CoreData
+import Social
 
 
 
-class HomeViewController: UIViewController, changeGoalDelegate {
+class HomeViewController: UIViewController, displayGoalAndStepsDelegate {
     
-    func setGoal() {
-        goalLabel.text = ""
-    }
-    
+    //Labels
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var stepOneLabel: UILabel!
+    @IBOutlet weak var stepTwoLabel: UILabel!
+    @IBOutlet weak var stepThreeLabel: UILabel!
     
     @IBOutlet weak var stepOneView: UIView!
     
+    //Buttons
     var button: TKAnimatedCheckButton! = nil
     var button2: TKAnimatedCheckButton! = nil
     var button3: TKAnimatedCheckButton! = nil
     
+    //Creating buttons
     func makeButton () {
         
         button = TKAnimatedCheckButton(frame: CGRectMake(40, 250, 50, 50))
@@ -42,35 +46,42 @@ class HomeViewController: UIViewController, changeGoalDelegate {
         button3.addTarget(self, action: "toggle3:", forControlEvents:.TouchUpInside)
         button3.skeletonColor = UIColor.flatRedColor().CGColor
         view.addSubview(button3)
-        
-        
     }
-    
-    func toggle1(sender: AnyObject!) {
-        button.checked = !button.checked
-    }
-    
-    
-    func toggle2(sender: AnyObject!) {
-        button2.checked = !button2.checked
-    }
-    
-    
+
+    //Button toggles
+    func toggle1(sender: AnyObject!) {button.checked = !button.checked}
+    func toggle2(sender: AnyObject!) {button2.checked = !button2.checked}
     func toggle3(sender: AnyObject!) {
         button3.checked = !button3.checked
+        goalsCompleted()
+    }
+
+    func goalsCompleted() {
+        
+        if (button.checked && button2.checked && button3.checked) {
+            print("Goal completed")
+            tweetThis()
+        }
+        
     }
     
-    
-
-    
-
-    @IBOutlet weak var goalLabel: UILabel!
+    func tweetThis() {
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            var tweetSheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            tweetSheet.setInitialText("I completed my goal: \(goalLabel.text!) for today! Party! 🙌🏽")
+            
+            self.presentViewController(tweetSheet, animated: true, completion: nil)
+        } else {
+            print ("Error")
+        }
+        
+    }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
-    
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -81,9 +92,6 @@ class HomeViewController: UIViewController, changeGoalDelegate {
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         
-        makeButton()
-        setGoal()
-        
         print(managedObjectContext)
         
         let newItem = NSEntityDescription.insertNewObjectForEntityForName("Goal", inManagedObjectContext: self.managedObjectContext) as! Goal
@@ -92,6 +100,23 @@ class HomeViewController: UIViewController, changeGoalDelegate {
         newItem.step1 = "Step one goal"
         
         
+    }
+    
+    func displayGoalsAndSteps(goal: String, step1: String, step2: String, step3: String) {
+        goalLabel.text = goal as String
+        stepOneLabel.text = step1 as String
+        stepTwoLabel.text = step2 as String
+        stepThreeLabel.text = step3 as String
+        
+        makeButton()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "mySegue" {
+            let secondViewController: AddNewGoalViewController = segue.destinationViewController as! AddNewGoalViewController
+            secondViewController.delegate = self
+        }
     }
 
     
@@ -107,6 +132,9 @@ class HomeViewController: UIViewController, changeGoalDelegate {
             fetchResults 
         }
     }
+    
+    
+
     
     
 }

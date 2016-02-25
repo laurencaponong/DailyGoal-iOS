@@ -10,7 +10,7 @@ import UIKit
 
 class PastGoalsTableViewController: UITableViewController {
     
-    var goals = ["Homework", "Walk the dog", "Wash the car"]
+    var goals = ["Finish final project", "Clean the whole house", "Set up direct deposit"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

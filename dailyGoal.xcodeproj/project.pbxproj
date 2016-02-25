@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		899062331C7D467300761D22 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899062321C7D467300761D22 /* Protocol.swift */; };
+		89EAE9621C7FA87C00B5A818 /* displayGoalAndStepsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EAE9611C7FA87C00B5A818 /* displayGoalAndStepsDelegate.swift */; };
 		CEB1C32E9C7F1AE0DF5DC184 /* Pods_dailyGoal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AADA6F663A031DA8017E068 /* Pods_dailyGoal.framework */; };
 		DB7DCFAF1C7E52FE00AC22FC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB7DCFAD1C7E52FE00AC22FC /* Model.xcdatamodeld */; };
 		DB7DCFB21C7E536C00AC22FC /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DCFB01C7E536C00AC22FC /* Goal+CoreDataProperties.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		03356A66CE3AEDD6DF4829BD /* Pods-dailyGoal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyGoal.release.xcconfig"; path = "Pods/Target Support Files/Pods-dailyGoal/Pods-dailyGoal.release.xcconfig"; sourceTree = "<group>"; };
 		5AADA6F663A031DA8017E068 /* Pods_dailyGoal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dailyGoal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		899062321C7D467300761D22 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		89EAE9611C7FA87C00B5A818 /* displayGoalAndStepsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayGoalAndStepsDelegate.swift; sourceTree = "<group>"; };
 		B14A7BFF4BB9763C366B0850 /* Pods-dailyGoal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyGoal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dailyGoal/Pods-dailyGoal.debug.xcconfig"; sourceTree = "<group>"; };
 		DB7DCFAE1C7E52FE00AC22FC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DB7DCFB01C7E536C00AC22FC /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 				DBB8C9561C7B5AF60097DCF8 /* Assets.xcassets */,
 				DBB8C9581C7B5AF60097DCF8 /* LaunchScreen.storyboard */,
 				DBB8C95B1C7B5AF60097DCF8 /* Info.plist */,
-				899062321C7D467300761D22 /* Protocol.swift */,
+				89EAE9611C7FA87C00B5A818 /* displayGoalAndStepsDelegate.swift */,
 			);
 			path = dailyGoal;
 			sourceTree = "<group>";
@@ -369,10 +369,10 @@
 				DB7DCFB31C7E536C00AC22FC /* Goal.swift in Sources */,
 				DBB8C9841C7B7BC40097DCF8 /* PastGoalsTableViewController.swift in Sources */,
 				DBB8C9801C7B71200097DCF8 /* AddNewGoalViewController.swift in Sources */,
-				899062331C7D467300761D22 /* Protocol.swift in Sources */,
 				DBB8C9501C7B5AF60097DCF8 /* AppDelegate.swift in Sources */,
 				DBB8C97E1C7B5B230097DCF8 /* HomeViewController.swift in Sources */,
 				DB7DCFB21C7E536C00AC22FC /* Goal+CoreDataProperties.swift in Sources */,
+				89EAE9621C7FA87C00B5A818 /* displayGoalAndStepsDelegate.swift in Sources */,
 				DB7DCFAF1C7E52FE00AC22FC /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
